@@ -3,6 +3,6 @@ module.exports = {
     entry: ['./src/js/script.js'],
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/public/js'
+        path: `${__dirname}/public/js`
     },
 }
