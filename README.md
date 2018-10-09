@@ -16,5 +16,19 @@ npm install
 ## 開発手順
 
 - `npm run start` / `yarn start`
-    - ローカル開発環境ブラウザの立ち上げ、自動でビルド・リロードを行います。
+    - ローカル開発環境ブラウザの立ち上げ、自動でビルド・リロードを行います。基本的にはこちらのコマンドだけで開発ができます。
 
+- `npm run build` / `yarn build`
+    - productionモードの最適化された状態でビルドします。
+
+
+## 使用言語
+
+- HTMLテンプレート: [pug](https://pugjs.org/api/getting-started.html)
+- JavaScript: [ES2015](https://babeljs.io/docs/en/learn)
+
+## 依存ライブラリ
+
+- [Babel](https://babeljs.io/)
+- [webpack](https://webpack.js.org/)
+- [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
