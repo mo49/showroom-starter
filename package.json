@@ -1,8 +1,7 @@
 {
   "name": "showroom-starter",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "showroom-starter development",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack --mode production --progress",
@@ -31,6 +30,7 @@
     "node-sass": "^4.9.3",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
+    "reset.css": "^2.0.2",
     "sass-loader": "^7.1.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",

@@ -42,14 +42,24 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader','sass-loader']
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 2,
+                            }
+                        },
+                        {
+                            loader: 'sass-loader',
+                        },
+                    ]
                 })
             }
         ]
     },
     devServer: {
         contentBase: DEST,
-        open: true
+        open: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -59,4 +69,8 @@ module.exports = {
         // css
         new ExtractTextPlugin('[name]')
     ],
+    // cache: true,
+    resolve: {
+        extensions: ['.js', '.json', '*'],
+    },
 }
