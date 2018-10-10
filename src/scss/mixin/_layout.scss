@@ -1,0 +1,12 @@
+@mixin layout( $env: 'pc' ) {
+    @if $env == 'pc' {
+        @media (min-width: $pc_min_width) {
+            @content;
+        }
+    } 
+    @if $env == 'sp' {
+        @media (max-width: ($pc_min_width - 1)) {
+            @content;
+        }
+    }
+}

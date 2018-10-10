@@ -1,7 +1,12 @@
 // reset.css
 @import "../../node_modules/reset.css/reset.css";
 
+// variable
 @import "variable";
-@import "mixin";
 
+// mixin
+@import "mixin/layout";
+@import "mixin/hover";
+
+// module
 @import "module/wrapper";
