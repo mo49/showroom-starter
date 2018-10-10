@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "showroom-starter development",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server & npm run rm:css",
     "build": "webpack --mode production --progress",
     "watch": "webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rm:css": "find ./src/scss/ -name '*.css' | xargs rm"
   },
   "repository": {
     "type": "git",

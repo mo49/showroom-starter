@@ -1,7 +1,7 @@
 // reset.css
 @import "../../node_modules/reset.css/reset.css";
 
-p{
-    color: #333;
-    
-}
+@import "variable";
+@import "mixin";
+
+@import "module/wrapper";
