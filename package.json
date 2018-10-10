@@ -34,10 +34,12 @@
     "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
+    "read-config": "^2.0.0",
     "reset.css": "^2.0.2",
     "sass-loader": "^7.1.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "webpack-route-data-mapper": "^2.1.0"
   }
 }
