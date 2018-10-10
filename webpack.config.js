@@ -49,8 +49,12 @@ module.exports = {
                                 importLoaders: 2,
                             }
                         },
+                        'postcss-loader',
                         {
                             loader: 'sass-loader',
+                            options: {
+                                includePaths: [ `${SRC}/scss` ],
+                            },
                         },
                     ]
                 })
@@ -69,7 +73,7 @@ module.exports = {
         // css
         new ExtractTextPlugin('[name]')
     ],
-    // cache: true,
+    cache: true,
     resolve: {
         extensions: ['.js', '.json', '*'],
     },
