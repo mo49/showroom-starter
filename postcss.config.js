@@ -1,5 +1,8 @@
 module.exports = {
     plugins: [
-        require('autoprefixer')()
+        require("postcss-assets")({
+            loadPaths: ["img/"]
+        }),
+        require("autoprefixer")()
     ]
 };

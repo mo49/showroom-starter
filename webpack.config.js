@@ -83,6 +83,13 @@ module.exports = {
             }
         ]
     },
+    postcss: function () {
+        return [
+            require('postcss-assets')({
+                loadPaths: ['img/']
+            })
+        ];
+    },
     devServer: {
         contentBase: DEST,
         open: true,
