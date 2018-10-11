@@ -1,14 +1,8 @@
 .wrapper{
-    font-size: 18px;
     @include layout('pc'){
         background-color: orange;
     }
     @include layout('sp'){
         background-color: skyblue;
     }
-
-}
-
-p{
-    @include hover();
 }
