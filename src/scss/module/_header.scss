@@ -1,6 +1,6 @@
 .header__logo{
-    // width: 725px;
-    // height: 105px;
-    // background-image: image-url('logo.png');
     @include image('logo.png');
+    @include sp-layout{
+        @include image('logo.png', 0.5);
+    }
 }

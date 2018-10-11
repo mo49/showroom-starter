@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SRC = './src';
 const DEST = './public';
 
-const constants = readConfig(`${SRC}/constants.yml`);
+const constants = readConfig(`./constants.yml`);
 
 const htmlTemplates = routeDataMapper({
     baseDir: `${SRC}/pug/page`,
@@ -82,13 +82,6 @@ module.exports = {
                 }
             }
         ]
-    },
-    postcss: function () {
-        return [
-            require('postcss-assets')({
-                loadPaths: ['img/']
-            })
-        ];
     },
     devServer: {
         contentBase: DEST,
