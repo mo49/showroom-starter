@@ -1,8 +1,8 @@
 .wrapper{
-    @include layout('pc'){
+    @include pc-layout{
         background-color: orange;
     }
-    @include layout('sp'){
+    @include sp-layout{
         background-color: skyblue;
     }
 }
