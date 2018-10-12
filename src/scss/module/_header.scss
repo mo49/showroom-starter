@@ -5,8 +5,8 @@
 }
 
 .header__logo{
-    @include image('logo.png');
+    @include image('logo.png', 0.5);
     @include sp-layout{
-        @include image('logo.png', 0.5);
+        @include image('logo.png', 0.25);
     }
 }

@@ -12,9 +12,11 @@
 @import "mixin/hover";
 @import "mixin/image";
 @import "mixin/strip";
+@import "mixin/border-text";
 
 // module
 @import "module/wrapper";
 @import "module/header";
 @import "module/footer";
+@import "module/fv";
 @import "module/gallery";
