@@ -1,8 +1,16 @@
 .wrapper{
+    width: 100%;
+    min-width: $pc_min_width;
+    height: auto;
+    font-size: $base-font-size--pc;
+    line-height: $base-line-height--pc;
+    font-family: $sans-serif;
+    overflow: hidden; // IEで指定しないと余白ができる
+
     @include pc-layout{
-        background-color: orange;
+        @include strip(100, $main-color, $accent-color, 45deg);
     }
     @include sp-layout{
-        background-color: skyblue;
+        @include strip(50, $accent-color, $main-color);
     }
 }

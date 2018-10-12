@@ -11,7 +11,10 @@
 @import "mixin/layout";
 @import "mixin/hover";
 @import "mixin/image";
+@import "mixin/strip";
 
 // module
 @import "module/wrapper";
 @import "module/header";
+@import "module/footer";
+@import "module/gallery";
