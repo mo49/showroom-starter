@@ -3,9 +3,11 @@ extends /layout/_default-layout
 prepend config-block
   - page_name = 'TOP'
 
-//- append stylesheet-block
+append stylesheet-block
+  link(rel="stylesheet", href="./css/style.css")
 
-//- append javascript-block
+append javascript-block
+  script(src="./js/script.js")
 
 block content-block
   include ../partial/_header

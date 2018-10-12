@@ -1,30 +1,28 @@
 const path = require('path');
 const readConfig = require('read-config');
-const routeDataMapper = require('webpack-route-data-mapper')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const SRC = './src';
 const DEST = './public';
 
 const constants = readConfig(`./${SRC}/constants.yml`);
 
-const htmlTemplates = routeDataMapper({
-    baseDir: `${SRC}/pug/page`,
-    src: '**/[!_]*.pug',
-    locals: Object.assign(
-        {},
-        constants,
-        {
-            meta: readConfig(`${SRC}/pug/meta.yml`)
-        }
-    )
-})
+const htmlTemplates = Object.assign(
+    {},
+    constants,
+    {
+        meta: readConfig(`${SRC}/pug/meta.yml`)
+    }
+);
 
 module.exports = {
     mode: 'development',
     entry: {
         'js/script.js': `${SRC}/js/script.js`,
+        'js/about.js': `${SRC}/js/about.js`,
         'css/style.css': `${SRC}/scss/style.scss`,
+        'css/about.css': `${SRC}/scss/about.scss`,
     },
     output: {
         filename: '[name]',
@@ -88,9 +86,20 @@ module.exports = {
         open: true,
     },
     plugins: [
-        ...htmlTemplates,
+        new HTMLWebpackPlugin({
+            templateParameters: htmlTemplates,
+            template: `${SRC}/pug/page/index.pug`,
+            filename: 'index.html',
+            inject: false,
+        }),
+        new HTMLWebpackPlugin({
+            templateParameters: htmlTemplates,
+            template: `${SRC}/pug/page/about.pug`,
+            filename: 'about.html',
+            inject: false,
+        }),
         // css
-        new ExtractTextPlugin('[name]')
+        new ExtractTextPlugin(`[name]`)
     ],
     cache: true,
     resolve: {
