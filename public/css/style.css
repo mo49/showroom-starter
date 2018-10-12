@@ -1,0 +1,139 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+@charset "UTF-8";
+/*
+usage
+z-index: index($z, header);
+*/
+.wrapper {
+  width: 100%;
+  height: auto;
+  font-family: YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "\30E1\30A4\30EA\30AA", sans-serif;
+  overflow: hidden;
+  font-size: 18px;
+  line-height: 24px; }
+  @media (max-width: 799px) {
+    .wrapper {
+      font-size: 12px;
+      line-height: 18px; } }
+  @media (min-width: 800px) {
+    .wrapper {
+      background-image: repeating-linear-gradient(45deg, #a7b4ff, #a7b4ff 50px, #ffb392 0, #ffb392 100px); } }
+  @media (max-width: 799px) {
+    .wrapper {
+      background-image: repeating-linear-gradient(-45deg, #ffb392, #ffb392 25px, #a7b4ff 0, #a7b4ff 50px); } }
+
+.header {
+  width: 100%;
+  padding: 5px;
+  background-color: #fff; }
+
+.header__logo {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('/img/logo.png');
+  background-size: 362.5px 52.5px;
+  width: 362.5px;
+  height: 52.5px; }
+  @media (max-width: 799px) {
+    .header__logo {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url('/img/logo.png');
+      background-size: 181.25px 26.25px;
+      width: 181.25px;
+      height: 26.25px; } }
+
+.fv__title h1 {
+  line-height: 2; }
+  @media (min-width: 800px) {
+    .fv__title h1 {
+      text-shadow: -4.24268px -4.24268px 4px #fff, 0px -6px 4px #fff, 4.24268px -4.24268px 4px #fff, 6px 0px 4px #fff, 4.24268px 4.24268px 4px #fff, 0px 6px 4px #fff, -4.24268px 4.24268px 4px #fff, -6px 0px 4px #fff;
+      font-size: 36px; } }
+  @media (max-width: 799px) {
+    .fv__title h1 {
+      text-shadow: -2.12134px -2.12134px 1px #fff, 0px -3px 1px #fff, 2.12134px -2.12134px 1px #fff, 3px 0px 1px #fff, 2.12134px 2.12134px 1px #fff, 0px 3px 1px #fff, -2.12134px 2.12134px 1px #fff, -3px 0px 1px #fff;
+      font-size: 21px; } }
+
+.gallery li[class*='work--'] {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer; }
+  .gallery li[class*='work--']:hover {
+    opacity: 0.8; }
+
+.gallery .work--1 {
+  background-color: #ddd; }
+
+.gallery .work--2 {
+  background-color: #333; }
+
+.gallery .work--3 {
+  background-color: #ddd; }
+
+.gallery .work--4 {
+  background-color: #333; }
+
+.gallery .work--5 {
+  background-color: #ddd; }
+
+.gallery .work--6 {
+  background-color: #333; }
+
+.gallery .work--7 {
+  background-color: #ddd; }
+
+.gallery .work--8 {
+  background-color: #333; }
+
+.gallery .work--9 {
+  background-color: #ddd; }
+
+.gallery .work--10 {
+  background-color: #333; }
