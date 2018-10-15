@@ -25,11 +25,27 @@ npm install
 - `npm run build` / `yarn build`
   - productionモードの最適化された状態でビルドします。`webpack-dev-server`コマンドでは開発用サーバー上でファイルを展開しているだけなので、実ファイルを取得する場合はビルドする必要があります。
 
-- 複数のJS/CSSファイルをビルドする
+## ページを追加する方法
 
-`webpack.config.js`からエントリーポイントを追加することで実現可能です。
+### HTML
 
-```
+`src/pug/page/`に`${page_name}.pug`を追加します。
+
+### CSS
+
+`src/scss/`に`${page_name}.scss`を追加します。  
+ページ専用のCSSファイルがない場合は不要です。
+
+### JavaScript
+
+`src/js/`に`${page_name}.js`を追加します。  
+ページ専用のJSファイルがない場合は不要です。
+
+### webpackの設定
+
+`webpack.config.js`から、エントリーポイントを追加します。
+
+```javascript
 entry: {
   'js/script.js': `${SRC}/js/script.js`,
   'js/about.js': `${SRC}/js/about.js`, // 追加例
@@ -38,10 +54,25 @@ entry: {
 }
 ```
 
-[WIP]
-SPAライクではなくなるが、複数JS/CSSファイルを別々のHTMLファイルで読み込みたい場合を検討
-https://github.com/webpack/docs/wiki/optimization#multi-page-app
+`webpack.config.js`から、コンパイル元のファイルと出力ファイル名を追加します。
 
+```javascript
+plugins: [
+  new HTMLWebpackPlugin({
+    templateParameters: htmlTemplates,
+    template: `${SRC}/pug/page/index.pug`,
+    filename: 'index.html',
+    inject: false,
+  }),
+  // 追加例
+  new HTMLWebpackPlugin({
+    templateParameters: htmlTemplates,
+    template: `${SRC}/pug/page/about.pug`, // コンパイル元のファイル
+    filename: 'about.html', // 出力ファイル名
+    inject: false,
+  }),
+],
+```
 
 ## 使用言語
 
