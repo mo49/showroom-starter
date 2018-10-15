@@ -27,19 +27,33 @@ npm install
 
 ## ページを追加する方法
 
-### HTML
-
-`src/pug/page/`に`${page_name}.pug`を追加します。
-
 ### CSS
 
 `src/scss/`に`${page_name}.scss`を追加します。  
-ページ専用のCSSファイルがない場合は不要です。
+`@import "base";`の設定は必須です。  
+
+※ページ専用のCSSファイルがない場合は不要です。
 
 ### JavaScript
 
 `src/js/`に`${page_name}.js`を追加します。  
-ページ専用のJSファイルがない場合は不要です。
+
+※ページ専用のJSファイルがない場合は不要です。
+
+### HTML
+
+`src/pug/page/`に`${page_name}.pug`を追加します。  
+`index.pug`をコピペして適宜変更すると良いです。  
+
+たとえばCSS/JSファイルを追加した場合は、以下のように読み込みます。
+
+```pug
+append stylesheet-block
+  link(rel="stylesheet", href="./css/about.css")
+
+append javascript-block
+  script(src="./js/about.js")
+```
 
 ### webpackの設定
 
