@@ -43,7 +43,7 @@ npm install
 ### HTML
 
 `src/pug/page/`に`${page_name}.pug`を追加します。  
-`index.pug`をコピペして適宜変更すると良いです。  
+`index.pug`をコピペして適宜変更すると良いです。  
 
 たとえばCSS/JSファイルを追加した場合は、以下のように読み込みます。
 
