@@ -25,23 +25,15 @@ npm install
 - `npm run build` / `yarn build`
   - productionモードの最適化された状態でビルドします。`webpack-dev-server`コマンドでは開発用サーバー上でファイルを展開しているだけなので、実ファイルを取得する場合はビルドする必要があります。
 
-- 複数のJS/CSSファイルをビルドする
+## ページを追加する方法
 
-`webpack.config.js`からエントリーポイントを追加することで実現可能です。
+### HTML
 
-```
-entry: {
-  'js/script.js': `${SRC}/js/script.js`,
-  'js/about.js': `${SRC}/js/about.js`, // 追加例
-  'css/style.css': `${SRC}/scss/style.scss`,
-  'css/about.css': `${SRC}/scss/about.scss`, // 追加例
-}
-```
+`src/pug/page/`に`${page_name}.pug`を追加します。
 
-[WIP]
-SPAライクではなくなるが、複数JS/CSSファイルを別々のHTMLファイルで読み込みたい場合を検討
-https://github.com/webpack/docs/wiki/optimization#multi-page-app
+### CSS/JS
 
+webpackのエントリーポイントを追加することでCSS/JSファイルを増やすことはできますが、ページごとに別々のCSS/JSファイルを読み込む仕様ではありません。  
 
 ## 使用言語
 
