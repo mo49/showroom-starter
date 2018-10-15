@@ -1,4 +1,4 @@
-import {hello} from './module/index';
+import {hello} from './module/hello';
 
 console.log('index page.')
 hello();
