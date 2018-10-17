@@ -4,9 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 const SRC = './src';
-const DEST = './public';
-
 const constants = readConfig(`./${SRC}/constants.yml`);
+const SUB = constants.SUB_DIR ? `/${constants.SUB_DIR}` : '';
+const DEST = `./public${SUB}`;
 
 const htmlTemplates = Object.assign(
     {},
@@ -25,7 +25,7 @@ module.exports = {
         'css/about.css': `${SRC}/scss/about.scss`,
     },
     output: {
-        filename: '[name]',
+        filename: './[name]',
         path: path.resolve(__dirname, DEST),
         publicPath: ''
     },
@@ -82,7 +82,7 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: DEST,
+        contentBase: './public',
         open: true,
     },
     plugins: [
@@ -99,7 +99,7 @@ module.exports = {
             inject: false,
         }),
         // css
-        new ExtractTextPlugin(`[name]`)
+        new ExtractTextPlugin(`./[name]`)
     ],
     cache: true,
     resolve: {
