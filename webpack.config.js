@@ -3,10 +3,11 @@ const readConfig = require('read-config');
 const routeDataMapper = require('webpack-route-data-mapper')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const SRC = './src';
-const DEST = './public';
+const constants = readConfig(`./src/constants.yml`);
 
-const constants = readConfig(`./${SRC}/constants.yml`);
+const SRC = './src';
+const SUB = constants.SUB_DIR ? `/${constants.SUB_DIR}` : '';
+const DEST = `./public${SUB}`;
 
 const htmlTemplates = routeDataMapper({
     baseDir: `${SRC}/pug/page`,
@@ -27,7 +28,7 @@ module.exports = {
         'css/style.css': `${SRC}/scss/style.scss`,
     },
     output: {
-        filename: '[name]',
+        filename: './[name]',
         path: path.resolve(__dirname, DEST),
         publicPath: ''
     },
@@ -84,13 +85,13 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: DEST,
+        contentBase: './public',
         open: true,
     },
     plugins: [
         ...htmlTemplates,
         // css
-        new ExtractTextPlugin('[name]')
+        new ExtractTextPlugin('./[name]')
     ],
     cache: true,
     resolve: {
