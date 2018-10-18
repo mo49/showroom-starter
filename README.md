@@ -45,7 +45,7 @@ webpackのエントリーポイントを追加することでCSS/JSファイル�
 SUB_DIR: sub
 ```
 
-さらにpublic直下にsubフォルダを作成し、imgフォルダをsubフォルダ内に移動させます。
+さらにpublic直下にsubフォルダを作成し、imgフォルダをsubフォルダ内に移動させます。
 
 
 ## 使用言語
