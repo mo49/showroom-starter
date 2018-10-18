@@ -5,7 +5,9 @@ prepend config-block
 
 //- append stylesheet-block
 
-//- append javascript-block
+append javascript-block
+  script.
+    document.documentElement.setAttribute('data-page', 'about')
 
 block content-block
   include ../partial/_header

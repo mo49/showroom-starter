@@ -20,3 +20,16 @@
 @import "module/footer";
 @import "module/fv";
 @import "module/gallery";
+
+/*
+ * NOTE:
+ * ページごとにスタイルを当てることもできるが好ましくない
+ * できる限りモジュール単位で完結するようにする
+ */
+// page
+html[data-page='index']{
+    @import "page/index";
+}
+html[data-page='about']{
+    @import "page/about";
+}
