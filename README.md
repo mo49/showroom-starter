@@ -1,64 +1,29 @@
-## 動作確認
+## 目的
 
-macOS High Sierra 10.13.6
+簡易なWebサイトを作成するためのスターターキットです。
 
-## 環境構築
+## ブランチ
 
-- node.js
-  - version8.12.0以上。随時`.node-version`を確認。
+### Pugベース
 
-- node_modules
+HTML(Pug), Sass(PostCSS), JavaScript(ES6)  
+非エンジニアにも取っ付きやすい構成
 
-```
-yarn
-```
-もしくは
-```
-npm install
-```
+- webpack-route-data-mapper
+  - https://github.com/mo49/showroom-web-starter/tree/feature/webpack-route-data-mapper
+  - CSS,JSを1枚にバンドルするSPAライクな構成
 
-## 開発手順
+- webpack-multi-page
+  - https://github.com/mo49/showroom-web-starter/tree/feature/webpack-multi-page
+  - 各ページで別々のCSS,JSを読み込む従来型の構成
 
-- `npm run start` / `yarn start`
-  - ローカル開発環境ブラウザの立ち上げ、自動でビルド・リロードを行います。基本的にはこちらのコマンドだけで開発ができます。
+### [WIP]Vue.jsベース
 
-- `npm run build` / `yarn build`
-  - productionモードの最適化された状態でビルドします。`webpack-dev-server`コマンドでは開発用サーバー上でファイルを展開しているだけなので、実ファイルを取得する場合はビルドする必要があります。
+JavaScript(Vue.js, Nuxt.js, typescript), Sass(PostCSS)  
+SAPでモダンな構成
 
-- 複数のJS/CSSファイルをビルドする
+- webpack-vue-ts
+  - Vue.js, typescript
 
-`webpack.config.js`からエントリーポイントを追加することで実現可能です。
-
-```
-entry: {
-  'js/script.js': `${SRC}/js/script.js`,
-  'js/about.js': `${SRC}/js/about.js`, // 追加例
-  'css/style.css': `${SRC}/scss/style.scss`,
-  'css/about.css': `${SRC}/scss/about.scss`, // 追加例
-}
-```
-
-[WIP]
-SPAライクではなくなるが、複数JS/CSSファイルを別々のHTMLファイルで読み込みたい場合を検討
-https://github.com/webpack/docs/wiki/optimization#multi-page-app
-
-
-## 使用言語
-
-- HTMLテンプレート：[pug](https://pugjs.org/api/getting-started.html)
-- CSSメタ言語：[Sass(SCSS)](http://sass-lang.com/)
-- JavaScript：[ES2015](https://babeljs.io/docs/en/learn)
-
-## 依存ライブラリ
-
-- [Babel](https://babeljs.io/)
-- [webpack](https://webpack.js.org/)
-- [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-- [PostCSS](https://postcss.org/)
-
-## 参考リポジトリ
-
-- https://github.com/google/web-starter-kit
-- https://github.com/Microsoft/TypeScript-Vue-Starter
-- https://github.com/kayac/kayac-html5-starter
-- https://github.com/nyawach/vue-ts-hmr-starter
+- webpack-vue-nuxt-ts
+  - Vue.js, typescript, Nuxt.js
