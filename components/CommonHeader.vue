@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <nuxt-link :to="{name: 'index'}">
-      <h1 class="header__logo">logo</h1>
+      <h1 class="header__logo">header logo</h1>
     </nuxt-link>
   </header>
 </template>
