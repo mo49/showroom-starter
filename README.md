@@ -1,6 +1,6 @@
 # starter-kit
 
-> My exquisite Nuxt.js project
+> My splendid Nuxt.js project
 
 ## Build Setup
 

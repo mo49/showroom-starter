@@ -6,7 +6,7 @@
         starter-kit
       </h1>
       <h2 class="subtitle">
-        My exquisite Nuxt.js project
+        My splendid Nuxt.js project
       </h2>
       <div class="links">
         <a
