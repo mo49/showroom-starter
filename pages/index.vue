@@ -10,18 +10,16 @@
 </template>
 
 <script>
-import common from '~/assets/js/common'
+import Common from '~/assets/js/mixins/common'
 
 export default {
+  mixins: [Common],
   components: {
   },
   head () {
     return {
       titleTemplate: null,
     }
-  },
-  mounted() {
-    common()
   },
 }
 </script>

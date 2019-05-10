@@ -6,10 +6,10 @@
 
 <script>
 import Meta from '~/assets/js/mixins/meta'
-import common from '~/assets/js/common'
+import Common from '~/assets/js/mixins/common'
 
 export default {
-  mixins: [Meta],
+  mixins: [Meta, Common],
   components: {
   },
   validate({params}) {
@@ -25,8 +25,5 @@ export default {
       }
     }
   },
-  mounted() {
-    common()
-  }
 }
 </script>
