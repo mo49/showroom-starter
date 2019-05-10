@@ -46,9 +46,6 @@ export default {
       head.meta.push({ hid: 'og:image', property: 'og:image', content: imageUrl })
     }
 
-
-    console.log(head)
-
     return head
   }
 }
