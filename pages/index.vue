@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import common from '~/assets/js/common'
+
 export default {
   components: {
   },
@@ -17,6 +19,9 @@ export default {
     return {
       titleTemplate: null,
     }
+  },
+  mounted() {
+    common()
   },
 }
 </script>

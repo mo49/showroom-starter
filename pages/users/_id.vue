@@ -5,7 +5,9 @@
 </template>
 
 <script>
-import Meta from '~/assets/mixins/meta'
+import Meta from '~/assets/js/mixins/meta'
+import common from '~/assets/js/common'
+
 export default {
   mixins: [Meta],
   components: {
@@ -23,5 +25,8 @@ export default {
       }
     }
   },
+  mounted() {
+    common()
+  }
 }
 </script>
