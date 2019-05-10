@@ -7,5 +7,5 @@
 </template>
 
 <style lang="scss">
-// @import "~assets/sass/module/header";
+@import "~assets/sass/module/header";
 </style>

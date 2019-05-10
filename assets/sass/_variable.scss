@@ -1,0 +1,58 @@
+// ======================================
+// media query
+// ======================================
+
+$wrapper_width: 900px;
+$pc_min_width: 768px;
+$sp_s_width: 375px;
+
+// ======================================
+// color
+// ======================================
+
+// main color
+$main-color: #ff0000 !default;
+// accent
+$accent-color: #ff4200 !default;
+// background
+$bg-color: #efefef !default;
+// font
+$font-color-main: #000 !default;
+$font-color-sub: #181818 !default;
+$font-color-desc: #333 !default;
+// links
+$link-color: #678cf5 !default;
+$link-color-hover: $link-color !default;
+$link-color-visited: #c167f5 !default;
+$link-color-active: null !default;
+// border
+$border-color: #666 !default;
+
+// ======================================
+// z-index
+// ======================================
+
+$z:
+wrapper,
+footer,
+header,
+gnav,
+modal,
+loading;
+/*
+  usage
+  z-index: index($z, header);
+*/
+
+// ======================================
+// font
+// ======================================
+
+$sans-serif: YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, "メイリオ", sans-serif;
+$serif: YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+
+$base-font-size--pc: 16px;
+$base-font-size--sp: 16px;
+
+$base-line-height--pc: 21px;
+$base-line-height--sp: 21px;

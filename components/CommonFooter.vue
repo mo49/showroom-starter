@@ -5,5 +5,5 @@
 </template>
 
 <style lang="scss">
-// @import "~assets/sass/module/footer";
+@import "~assets/sass/module/footer";
 </style>
