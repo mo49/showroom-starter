@@ -57,6 +57,7 @@ export default {
   ** Global CSS
   */
   css: [
+    'reset-css'
   ],
 
   /*
