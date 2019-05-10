@@ -16,10 +16,5 @@ export default {
   mixins: [Common],
   components: {
   },
-  head () {
-    return {
-      titleTemplate: null,
-    }
-  },
 }
 </script>
