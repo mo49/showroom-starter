@@ -8,4 +8,7 @@
 
 <style lang="scss">
 @import "~assets/sass/module/header";
+.header__logo{
+  background-image: url("~assets/image/common/logo.png");
+}
 </style>
