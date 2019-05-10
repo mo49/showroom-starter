@@ -70,8 +70,15 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
   axios: {
+  },
+  styleResources: {
+    scss: [
+      '~/assets/sass/_variable.scss',
+      '~/assets/sass/_mixin.scss'
+    ]
   },
 
   /*
