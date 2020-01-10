@@ -8,9 +8,7 @@ module.exports = {
             basePath: `public/`,
             loadPaths: [ `${SUB}img/` ],
         }),
-        require('autoprefixer')({
-            browsers: ['last 2 versions']
-        }),
+        require('autoprefixer')({}),
         require('cssnano')({
             autoprefixer: false
         })
