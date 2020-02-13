@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "showroom-starter development",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --port 3000 --hot --host 0.0.0.0",
     "build": "webpack --mode production --progress",
     "watch": "webpack --watch",
     "public": "cd public && php -S localhost:9000"
