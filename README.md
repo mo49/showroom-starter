@@ -1,6 +1,9 @@
-## 動作確認
+## 推奨条件
 
-macOS High Sierra 10.13.6
+単発ペライチのLP
+
+複数ページの場合は https://github.com/mo49/nuxt-starter を推奨
+
 
 ## 環境構築
 
