@@ -1,7 +1,9 @@
 @import "base";
 
 // module
+@import "module/common";
 @import "module/wrapper";
+@import "module/inner";
 @import "module/header";
 @import "module/footer";
 @import "module/fv";

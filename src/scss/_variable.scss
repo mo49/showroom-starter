@@ -2,8 +2,8 @@
 // media query
 // ======================================
 
-$pc_min_width: 800px;
-
+$section_inner_width: 1000px;
+$pc_min_width: 768px;
 
 // ======================================
 // color
@@ -17,7 +17,7 @@ $accent-color: #ffb392 !default;
 // background
 $bg-color: #fff !default;
 // font
-$font-color: #fff !default;
+$font-color: #000 !default;
 // sub font color
 $sub-font-color: #333 !default;
 // links

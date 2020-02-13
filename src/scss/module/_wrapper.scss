@@ -6,11 +6,15 @@
     font-size: $base-font-size--pc;
     line-height: $base-line-height--pc;
 
+    @include pc-layout{
+        min-width: $section_inner_width;
+    }
     @include sp-layout{
         font-size: $base-font-size--sp;
         line-height: $base-line-height--sp;
     }
 
+    // test
     @include pc-layout{
         @include strip(100, $main-color, $accent-color, 45deg);
     }
