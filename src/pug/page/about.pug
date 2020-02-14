@@ -4,10 +4,12 @@ prepend config-block
   - page_name = 'ABOUT'
 
 append stylesheet-block
-  link(rel="stylesheet", href="./css/about.css")
+  - base = SUB_DIR ? `/${SUB_DIR}` : ''
+  link(rel="stylesheet", href=`${base}/css/about.css`)
 
 append javascript-block
-  script(src="./js/about.js")
+  - base = SUB_DIR ? `/${SUB_DIR}` : ''
+  script(src=`${base}/js/about.js`)
 
 block content-block
   include ../partial/_header
