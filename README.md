@@ -95,13 +95,13 @@ plugins: [
 ## 多重階層のサイトを作る場合
 
 サイトのルートディレクトリではなく、サブディレクトリに配置するサイトを作成する場合は、ファイルのパス設定を変更する必要があります。  
-たとえば`http://example.com/sub/`というサイト構成ならば、`src/constants.yml`を以下のように変更します。
+たとえば`http://example.com/subdir/`というサイト構成ならば、`src/constants.yml`を以下のように変更します。
 
 ```yml
-SUB_DIR: sub
+SUB_DIR: subdir
 ```
 
-さらにpublic直下にsubフォルダを作成し、imgフォルダをsubフォルダ内に移動させます。
+さらにpublic直下にsubdirフォルダを作成し、imgフォルダをsubdirフォルダ内に移動させます。
 
 
 ## 使用言語

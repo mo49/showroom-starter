@@ -23,7 +23,7 @@ keywords: []
 # Twitter cardsの管理者として登録するアカウント（※任意）
 # twitter_card_owner: '@TwitterJP'
 
-# favicon
+# favicon（フルパス推奨）
 # favicon_url: /favicon.ico
 
 # サイトをホーム画面に追加した際のアイコン画像

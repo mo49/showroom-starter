@@ -27,7 +27,7 @@ module.exports = {
     output: {
         filename: './[name]',
         path: path.resolve(__dirname, DEST),
-        publicPath: ''
+        publicPath: SUB
     },
     module: {
         rules: [
