@@ -38,6 +38,9 @@ module.exports = {
                 options: {
                     compact: true,
                     cacheDirectory: true,
+                    presets: [
+                        '@babel/preset-env',
+                    ],
                 }
             },
             {
