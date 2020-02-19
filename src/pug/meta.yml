@@ -17,8 +17,8 @@ keywords: []
 # Facebookアプリのapp id（入れないとWarningが出る）
 # facebook_app_id: 99999999999
 
-# Twitter ハッシュタグ
-# hashtags: hashtag1, hashtag2, hashtag3
+# Twitter ハッシュタグ(カンマの後に余計な空白を入れない)
+# hashtags: hashtag1,hashtag2,hashtag3
 
 # Twitter cardsの管理者として登録するアカウント（※任意）
 # twitter_card_owner: '@TwitterJP'
